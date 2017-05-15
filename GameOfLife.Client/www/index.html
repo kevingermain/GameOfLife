@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game Of Life</title>
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="http://localhost:56537/signalr/hubs"></script>
+    <link href="main.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Game Of Life (Multiplayers)</h1>
+    <canvas id="game" width="640" height="480">Canvas is not supported</canvas>
+    <div id="toolbar">
+        <ul id="list-players"></ul>
+        <div id="list-patterns">
+            <span>Send a pattern :</span>
+            <select>
+                <option value="Block">Block</option>
+                <option value="Blinker">Blinker</option>
+                <option value="Glider">Glider</option>
+                <option value="Pentadecathlon">Pentadecathlon</option>
+            </select>
+            <button type="submit">Send</button>
+        </div>
+    </div>
+    <script src="Scripts/main.js"></script>
+</body>
+</html>

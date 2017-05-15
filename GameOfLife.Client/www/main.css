@@ -1,0 +1,46 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#game {
+    border: 1px solid #222;
+    margin: 20px auto;
+    display: block;
+}
+
+.square-player {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+ul#list-players {
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px;
+}
+    ul#list-players li {
+        vertical-align: middle;
+    }
+#list-patterns {
+    float: right;
+    margin-right: 20px;
+}
+#toolbar {
+    margin: 20px auto;
+    width: 640px;
+}
+canvas {
+    background-color: #fafafa;
+}
+
+h1 {
+    margin: 10px auto;
+    text-align: center;
+    font-family: "Segoe UI";
+}
