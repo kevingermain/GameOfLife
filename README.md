@@ -13,7 +13,7 @@ The solution has created with Visual Studio 2017 and it's composed of two projec
 http://kenium-001-site6.btempurl.com/client/www/
 
 ## Architectural choices
-I've chosen to use ASP .NET and signalR because .NET is my favorite theme of developement and most of my knowledge about programming for the back-end is C#.
+I've chosen to use ASP .NET and signalR because .NET is my favorite theme of developement and most of my knowledge about programming for the back-end is C#. For the front, simple HTML, CSS and Javascript/Jquery are used.
 
 ## Additional things To Do
 Additionnal things possible to do is add more patterns, create responsive grid, create cells with click and move. Using SASS for the CSS :)
