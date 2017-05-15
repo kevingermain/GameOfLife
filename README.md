@@ -16,7 +16,7 @@ http://kenium-001-site6.btempurl.com/client/www/
 I've chosen to use ASP .NET and signalR because .NET is my favorite theme of developement and most of my knowledge about programming for the back-end is C#.
 
 ## Additional things To Do
-Additionnal things possible to do is add more patterns, create responsive grid, create cells with click and move
+Additionnal things possible to do is add more patterns, create responsive grid, create cells with click and move. Using SASS for the CSS :)
 
 ## Other projects
 http://www.kevingermain.com/en/blog/2016/06/04/webimages-display-all-images-from-web-page-with-url/
