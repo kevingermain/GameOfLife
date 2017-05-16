@@ -73,10 +73,10 @@ namespace GameOfLife.Hubs
                     // Add the newCells from players for the next generation
                     _cells.AddRangeOfCells(_newCells);
 
-                    _newCells = new List<Cell>();
-                    _cellsNexGeneration = new List<Cell>();
+                    _newCells.Clear();
+                    _cellsNexGeneration.Clear();
 
-                    Thread.Sleep(1000);
+                    Thread.Sleep(100);
                 }
             }
         }
@@ -93,7 +93,7 @@ namespace GameOfLife.Hubs
             if (Game == null)
                 Game = new Thread(Main);
 
-            if(!Game.IsAlive)
+            if (!Game.IsAlive)
                 Game.Start();
 
             return base.OnConnected();
@@ -109,6 +109,9 @@ namespace GameOfLife.Hubs
             {
                 Game.Abort();
                 Game = null;
+                _newCells.Clear();
+                _cells.Clear();
+                _cellsNexGeneration.Clear();
             }
 
             return base.OnDisconnected(stop);
