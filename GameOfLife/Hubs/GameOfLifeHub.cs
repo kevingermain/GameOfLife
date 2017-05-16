@@ -88,7 +88,7 @@ namespace GameOfLife.Hubs
             var player = new Player(Context.ConnectionId, ColorTranslator.ToHtml(newColor));
 
             _players.Add(player);
-            Clients.All.setListOfPlayers(_players);
+            Clients.All.setListOfPlayers(_players.Select(p => p.Color));
 
             if (Game == null)
                 Game = new Thread(Main);
@@ -99,8 +99,17 @@ namespace GameOfLife.Hubs
             return base.OnConnected();
         }
 
-        public override Task OnDisconnected(bool stop)
+        public override Task OnDisconnected(bool stopCalled)
         {
+            if (stopCalled)
+            {
+                Console.WriteLine($"Client {Context.ConnectionId} explicitly closed the connection.");
+            }
+            else
+            {
+                Console.WriteLine($"Client {Context.ConnectionId} timed out .");
+            }
+
             var player = _players.Find(p => p.ConnectionId == Context.ConnectionId);
             _players.Remove(player);
             Clients.All.setListOfPlayers(_players);
@@ -114,7 +123,7 @@ namespace GameOfLife.Hubs
                 _cellsNexGeneration.Clear();
             }
 
-            return base.OnDisconnected(stop);
+            return base.OnDisconnected(stopCalled);
         }
 
         public void OnNewCell(string id, int x, int y)

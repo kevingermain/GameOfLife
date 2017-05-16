@@ -59,7 +59,7 @@
     $.connection.gameOfLifeHub.client.setListOfPlayers = function (players) {
         $("#list-players").html("");
         for (var i = 0; i < players.length; i++) {
-            $("#list-players").append("<li><div class='square-player' style='background-color:" + players[i].Color + "'></div><span data-id='" + players[i].ConnectionId + "'>Player " + (i + 1) + "</span></li>");
+            $("#list-players").append("<li><div class='square-player' style='background-color:" + players[i] + "'></div><span>Player " + (i + 1) + "</span></li>");
         }
     };
 
