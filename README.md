@@ -7,7 +7,7 @@ Multiplayer Game Of Life with SignalR and ASP .NET OWIN
 To achive it, a good solution (for optimization) was to check each alive cells and its neighbors rather than all cells of the entire map.
 
 ## How to build/deploy/use
-The solution has created with Visual Studio 2017 and it's composed of two projects (ASP .NET with OWIN) that you have to launch at the same time : The client project (GameOfLife.Client, which will send some requests) and the server project (GameOfLife.Server, which will received some requests).
+The solution has created with Visual Studio 2017 and it's composed of two projects (ASP .NET with OWIN) that you have to launch at the same time : The client project (GameOfLife.Client, which will send some requests) and the server project (GameOfLife.Server, which will received some requests). Don't forget to change the URL base if you want to publish it for a production (main.js and index.html)
 
 ## Link of the demo
 http://kenium-001-site6.btempurl.com/client/www/
