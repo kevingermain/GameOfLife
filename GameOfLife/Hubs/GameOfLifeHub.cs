@@ -112,7 +112,7 @@ namespace GameOfLife.Hubs
 
             var player = _players.Find(p => p.ConnectionId == Context.ConnectionId);
             _players.Remove(player);
-            Clients.All.setListOfPlayers(_players);
+            Clients.All.setListOfPlayers(_players.Select(p => p.Color));
 
             if (!_players.Any())
             {
